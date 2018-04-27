@@ -1,24 +1,428 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M1p-dz-NCZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Delegate-->
+        <scene sceneID="d1w-xo-QmH">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="M1p-dz-NCZ" customClass="EventListViewController" customModule="DaysUntil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IwG-s1-ER2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y8e-5V-0fS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="O7U-Vk-Jaq">
+                                    <rect key="frame" x="0.0" y="133" width="375" height="105"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lve-fa-SAF" customClass="ScrollViewWithButtons" customModule="DaysUntil" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-CV-WTZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="2250" height="105"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejj-Ro-Onb" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                                            <color key="backgroundColor" name="Green/600"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightColor">
+                                                                    <color key="value" name="Green/600"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                                                    <color key="value" name="Green/800"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="plusViewPressedWithSender:" destination="M1p-dz-NCZ" eventType="touchUpInside" id="bS8-Ua-D5k"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oH9-Bb-L3N" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                            <rect key="frame" x="375" y="0.0" width="375" height="105"/>
+                                                            <color key="backgroundColor" name="Orange/600"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightColor">
+                                                                    <color key="value" name="Orange/600"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                                                    <color key="value" name="Orange/800"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="plusViewPressedWithSender:" destination="M1p-dz-NCZ" eventType="touchUpInside" id="jHI-Iq-tBv"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfv-t9-emN" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                            <rect key="frame" x="750" y="0.0" width="375" height="105"/>
+                                                            <color key="backgroundColor" name="Purple/600"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightColor">
+                                                                    <color key="value" name="Purple/600"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                                                    <color key="value" name="Purple/800"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="plusViewPressedWithSender:" destination="M1p-dz-NCZ" eventType="touchUpInside" id="H6p-ft-5VD"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5F-ho-LaU" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                            <rect key="frame" x="1125" y="0.0" width="375" height="105"/>
+                                                            <color key="backgroundColor" name="Blue/600"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightColor">
+                                                                    <color key="value" name="Blue/600"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                                                    <color key="value" name="Blue/800"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="plusViewPressedWithSender:" destination="M1p-dz-NCZ" eventType="touchUpInside" id="6t0-1g-Igi"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzd-0d-rgf" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                            <rect key="frame" x="1500" y="0.0" width="375" height="105"/>
+                                                            <color key="backgroundColor" name="Green/600"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightColor">
+                                                                    <color key="value" name="Green/600"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                                                    <color key="value" name="Green/800"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="plusViewPressedWithSender:" destination="M1p-dz-NCZ" eventType="touchUpInside" id="dDN-jD-JFj"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xA-TL-6rY" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                            <rect key="frame" x="1875" y="0.0" width="375" height="105"/>
+                                                            <color key="backgroundColor" name="Orange/600"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightColor">
+                                                                    <color key="value" name="Orange/600"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
+                                                                    <color key="value" name="Orange/800"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="plusViewPressedWithSender:" destination="M1p-dz-NCZ" eventType="touchUpInside" id="rdY-ox-JUT"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Nrp-CV-WTZ" secondAttribute="trailing" id="8tE-0S-Gcy"/>
+                                                <constraint firstItem="ejj-Ro-Onb" firstAttribute="width" secondItem="lve-fa-SAF" secondAttribute="width" id="FAE-JW-R9Q"/>
+                                                <constraint firstAttribute="height" secondItem="Nrp-CV-WTZ" secondAttribute="height" id="K0N-NO-AW9"/>
+                                                <constraint firstItem="Nrp-CV-WTZ" firstAttribute="top" secondItem="lve-fa-SAF" secondAttribute="top" id="Pck-73-qCN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Nrp-CV-WTZ" secondAttribute="bottom" id="ePL-IR-Cnn"/>
+                                                <constraint firstItem="Nrp-CV-WTZ" firstAttribute="leading" secondItem="lve-fa-SAF" secondAttribute="leading" id="q25-yW-gaQ"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="delegate" destination="M1p-dz-NCZ" id="gUR-4c-xNT"/>
+                                            </connections>
+                                        </scrollView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="erG-tH-oh3">
+                                            <rect key="frame" x="167" y="32" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="erG-tH-oh3" secondAttribute="height" multiplier="1:1" id="ShT-Jb-tXJ"/>
+                                                <constraint firstAttribute="height" constant="40" id="emU-3Z-fwU"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6h-Km-pJz">
+                                            <rect key="frame" x="170" y="38" width="36.5" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="lve-fa-SAF" secondAttribute="trailing" id="YRS-pK-zEQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="lve-fa-SAF" secondAttribute="bottom" id="eLe-bd-Lfg"/>
+                                        <constraint firstItem="lve-fa-SAF" firstAttribute="top" secondItem="O7U-Vk-Jaq" secondAttribute="top" id="foH-ah-tbi"/>
+                                        <constraint firstItem="erG-tH-oh3" firstAttribute="centerX" secondItem="O7U-Vk-Jaq" secondAttribute="centerX" id="gZR-bS-8ya"/>
+                                        <constraint firstItem="erG-tH-oh3" firstAttribute="top" secondItem="O7U-Vk-Jaq" secondAttribute="top" constant="32" id="kQf-rn-7z5"/>
+                                        <constraint firstItem="a6h-Km-pJz" firstAttribute="centerY" secondItem="O7U-Vk-Jaq" secondAttribute="centerY" id="qpB-U5-Uru"/>
+                                        <constraint firstAttribute="bottom" secondItem="erG-tH-oh3" secondAttribute="bottom" constant="33" id="tDc-7g-pA7"/>
+                                        <constraint firstItem="a6h-Km-pJz" firstAttribute="centerX" secondItem="O7U-Vk-Jaq" secondAttribute="centerX" id="u8e-GK-n6Q"/>
+                                        <constraint firstItem="lve-fa-SAF" firstAttribute="leading" secondItem="O7U-Vk-Jaq" secondAttribute="leading" id="zgX-fX-kes"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="105" id="kio-uk-s8z" customClass="EventCell" customModule="DaysUntil" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kio-uk-s8z" id="1MS-Ez-7NC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" text="22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4m-A4-UoE">
+                                                    <rect key="frame" x="247" y="0.0" width="112" height="105"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="dhD-OO-Eam"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="75"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something interesting happens" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-Cd-fSg">
+                                                    <rect key="frame" x="16" y="8" width="223" height="89"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Z4m-A4-UoE" firstAttribute="leading" secondItem="5GS-Cd-fSg" secondAttribute="trailing" constant="8" id="6Ge-P8-SeZ"/>
+                                                <constraint firstItem="5GS-Cd-fSg" firstAttribute="top" secondItem="1MS-Ez-7NC" secondAttribute="top" constant="8" id="Fbh-Ku-DTH"/>
+                                                <constraint firstItem="5GS-Cd-fSg" firstAttribute="leading" secondItem="1MS-Ez-7NC" secondAttribute="leading" constant="16" id="TpZ-MN-BZM"/>
+                                                <constraint firstItem="Z4m-A4-UoE" firstAttribute="top" secondItem="1MS-Ez-7NC" secondAttribute="top" id="W2N-bb-Zrg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Z4m-A4-UoE" secondAttribute="bottom" id="WMc-eQ-p8E"/>
+                                                <constraint firstAttribute="bottom" secondItem="5GS-Cd-fSg" secondAttribute="bottom" constant="8" id="e54-Pj-iPP"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z4m-A4-UoE" secondAttribute="trailing" constant="16" id="q8m-Md-W95"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="daysLabel" destination="Z4m-A4-UoE" id="UXz-St-CSj"/>
+                                            <outlet property="titleLabel" destination="5GS-Cd-fSg" id="paY-VR-urV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="M1p-dz-NCZ" id="TMu-K1-PkH"/>
+                                    <outlet property="delegate" destination="M1p-dz-NCZ" id="XfE-KS-Jlh"/>
+                                </connections>
+                            </tableView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kN8-3S-IWM">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8W-9q-I5L" customClass="GADBannerView">
+                                        <rect key="frame" x="27.5" y="0.0" width="320" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BLL-5j-Jpc"/>
+                                            <constraint firstAttribute="width" constant="320" id="kVp-Uj-Loj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="delegate" destination="M1p-dz-NCZ" id="7Ov-Dh-3M6"/>
+                                            <outlet property="rootViewController" destination="M1p-dz-NCZ" id="aLh-zP-4yM"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AaZ-Xh-npG"/>
+                                    <constraint firstItem="U8W-9q-I5L" firstAttribute="centerX" secondItem="kN8-3S-IWM" secondAttribute="centerX" id="T3y-2I-yW6"/>
+                                    <constraint firstItem="U8W-9q-I5L" firstAttribute="top" secondItem="kN8-3S-IWM" secondAttribute="top" id="Xg1-Vn-j2G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="kN8-3S-IWM" firstAttribute="leading" secondItem="Xrd-Zg-kWe" secondAttribute="leading" id="DKa-Nb-G8b"/>
+                            <constraint firstItem="Xrd-Zg-kWe" firstAttribute="bottom" secondItem="kN8-3S-IWM" secondAttribute="bottom" id="DXt-LS-LJm"/>
+                            <constraint firstItem="y8e-5V-0fS" firstAttribute="leading" secondItem="Xrd-Zg-kWe" secondAttribute="leading" id="Kac-9R-qOt"/>
+                            <constraint firstItem="Xrd-Zg-kWe" firstAttribute="trailing" secondItem="y8e-5V-0fS" secondAttribute="trailing" id="MD8-V8-zze"/>
+                            <constraint firstAttribute="bottom" secondItem="y8e-5V-0fS" secondAttribute="bottom" id="VoQ-iQ-VNs"/>
+                            <constraint firstItem="y8e-5V-0fS" firstAttribute="top" secondItem="IwG-s1-ER2" secondAttribute="top" id="dcR-Xw-UXx"/>
+                            <constraint firstItem="kN8-3S-IWM" firstAttribute="trailing" secondItem="Xrd-Zg-kWe" secondAttribute="trailing" id="oBZ-EI-Un6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xrd-Zg-kWe"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="P2Z-pd-DSc" appends="YES" id="zeK-rT-GLW"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="bannerHeightContraint" destination="AaZ-Xh-npG" id="cxh-7M-QSp"/>
+                        <outlet property="bannerView" destination="U8W-9q-I5L" id="uc7-Bb-FTO"/>
+                        <outlet property="buttonImage" destination="erG-tH-oh3" id="ceF-r2-0OJ"/>
+                        <outlet property="buttonText" destination="a6h-Km-pJz" id="g8u-AX-31S"/>
+                        <outlet property="scrollView" destination="lve-fa-SAF" id="8TA-nE-7KO"/>
+                        <outlet property="stackView" destination="Nrp-CV-WTZ" id="4qF-rs-uAg"/>
+                        <outlet property="tableView" destination="y8e-5V-0fS" id="bh9-hp-P0z"/>
+                        <segue destination="SP3-HB-QDh" kind="show" identifier="NewEvent" id="xKM-le-i6I"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUH-El-lVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="P2Z-pd-DSc">
+                    <connections>
+                        <action selector="cycleTheme" destination="M1p-dz-NCZ" id="jiw-xb-j09"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-815.20000000000005" y="183.05847076461771"/>
+        </scene>
+        <!--Event Edit View Controller-->
+        <scene sceneID="Gkf-8a-Cmj">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="SP3-HB-QDh" customClass="EventEditViewController" customModule="DaysUntil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gaX-xf-5sy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-RP-0aK">
+                                <rect key="frame" x="8" y="28" width="359" height="322"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Event" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzj-me-D4a">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YGM-9g-d0H"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="SP3-HB-QDh" id="fh2-kK-z3t"/>
+                                        </connections>
+                                    </textField>
+                                    <datePicker clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="I8T-g7-mY9">
+                                        <rect key="frame" x="0.0" y="58" width="359" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="544462128.72680199">
+                                            <!--2018-04-03 15:28:48 +0000-->
+                                        </date>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </datePicker>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL5-iQ-we5">
+                                        <rect key="frame" x="0.0" y="278" width="359" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyF-1D-FuI">
+                                                <rect key="frame" x="8" y="11.5" width="126" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yGH-JZ-xfN">
+                                                <rect key="frame" x="302" y="10" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qyF-1D-FuI" secondAttribute="trailing" constant="20" symbolic="YES" id="5mf-tA-l8D"/>
+                                            <constraint firstItem="qyF-1D-FuI" firstAttribute="leading" secondItem="hL5-iQ-we5" secondAttribute="leading" constant="8" id="OT8-ru-lbP"/>
+                                            <constraint firstItem="yGH-JZ-xfN" firstAttribute="centerY" secondItem="hL5-iQ-we5" secondAttribute="centerY" id="TSd-aI-ELg"/>
+                                            <constraint firstItem="qyF-1D-FuI" firstAttribute="centerY" secondItem="hL5-iQ-we5" secondAttribute="centerY" id="eRU-6i-dFD"/>
+                                            <constraint firstAttribute="height" constant="50" id="qYS-FA-ses"/>
+                                            <constraint firstAttribute="trailing" secondItem="yGH-JZ-xfN" secondAttribute="trailing" constant="8" id="u9K-Ia-n62"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BIY-im-2al">
+                                        <rect key="frame" x="0.0" y="282" width="359" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfG-io-t55" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="175.5" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="cancelButton"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancelButtonPressed:" destination="SP3-HB-QDh" eventType="touchUpInside" id="Zwu-09-LB0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZC-Xy-RZX" customClass="StyleButton" customModule="DaysUntil" customModuleProvider="target">
+                                                <rect key="frame" x="183.5" y="0.0" width="175.5" height="40"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="doneButton"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addButtonPressed:" destination="SP3-HB-QDh" eventType="touchUpInside" id="FhC-EQ-PUr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FQt-Iu-bdw" firstAttribute="trailing" secondItem="Of1-RP-0aK" secondAttribute="trailing" constant="8" id="3L9-Km-B6T"/>
+                            <constraint firstItem="Of1-RP-0aK" firstAttribute="leading" secondItem="FQt-Iu-bdw" secondAttribute="leading" constant="8" id="egj-ha-eJv"/>
+                            <constraint firstItem="Of1-RP-0aK" firstAttribute="top" secondItem="FQt-Iu-bdw" secondAttribute="top" constant="8" id="wgw-GV-LW1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FQt-Iu-bdw"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="DfG-io-t55" id="7Kk-vU-MbX"/>
+                        <outlet property="datePicker" destination="I8T-g7-mY9" id="6CZ-uf-fQD"/>
+                        <outlet property="doneButton" destination="bZC-Xy-RZX" id="lnQ-Hg-5tP"/>
+                        <outlet property="textField" destination="dzj-me-D4a" id="LeX-sQ-0MP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ka7-zO-P9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="183"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="40" height="40"/>
+        <namedColor name="Blue/600">
+            <color red="0.012000000104308128" green="0.60799998044967651" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue/800">
+            <color red="0.0080000003800000004" green="0.46700000759999999" blue="0.74099999670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green/600">
+            <color red="0.2630000114440918" green="0.62699997425079346" blue="0.27799999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green/800">
+            <color red="0.18000000720000001" green="0.4900000095" blue="0.1959999949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Orange/600">
+            <color red="0.96100002529999995" green="0.48600000139999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Orange/800">
+            <color red="0.93699997660000001" green="0.42399999500000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple/600">
+            <color red="0.55699998140335083" green="0.14100000262260437" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple/800">
+            <color red="0.41600000860000003" green="0.1059999987" blue="0.60399997230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

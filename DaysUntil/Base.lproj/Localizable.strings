@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  DaysUntil
+
+  Created by David Somen on 2018/04/13.
+  Copyright © 2018 David Somen. All rights reserved.
+*/
+
+"event_title_seed_1" = "💡Tap the + button to add a new event";
+"event_title_seed_2" = "💡Tap an event to edit it";
+"event_title_seed_3" = "💡Swipe an event to delete it";
+"event_title_seed_4" = "💡Swipe the + button to change the theme";
+
+"event_title_screenshot_seed_1" = "Junior's Big Day";
+"event_title_screenshot_seed_2" = "Science Assignment";
+"event_title_screenshot_seed_3" = "Disney Land Trip";
+"event_title_screenshot_seed_4" = "Christmas Day🎄";
+"event_title_screenshot_seed_5" = "My Birthday";

@@ -1,0 +1,14 @@
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "DfG-io-t55"; */
+"DfG-io-t55.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "OK"; ObjectID = "a6h-Km-pJz"; */
+"a6h-Km-pJz.text" = "使用";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "bZC-Xy-RZX"; */
+"bZC-Xy-RZX.normalTitle" = "完成";
+
+/* Class = "UITextField"; placeholder = "Event"; ObjectID = "dzj-me-D4a"; */
+"dzj-me-D4a.placeholder" = "事件";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "qyF-1D-FuI"; */
+"qyF-1D-FuI.text" = "Notifications";

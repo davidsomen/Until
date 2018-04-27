@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  DaysUntil
+
+  Created by David Somen on 2018/04/13.
+  Copyright © 2018 David Somen. All rights reserved.
+*/
+
+"event_title_seed_1" = "💡点击 + 按钮添加新的事件";
+"event_title_seed_2" = "💡点击一个事件进行编辑";
+"event_title_seed_3" = "💡滑动一个事件进行删除";
+"event_title_seed_4" = "💡滑动 + 按键滚动浏览不同的主题";
+
+"event_title_screenshot_seed_1" = "毕业典礼";
+"event_title_screenshot_seed_2" = "科学课作业";
+"event_title_screenshot_seed_3" = "迪士尼乐园之旅";
+"event_title_screenshot_seed_4" = "春节🌸";
+"event_title_screenshot_seed_5" = "我的生日";

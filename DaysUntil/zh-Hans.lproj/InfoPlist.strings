@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  DaysUntil
+
+  Created by David Somen on 2018/04/11.
+  Copyright © 2018 David Somen. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "直到";
+"NSHumanReadableCopyright" = "Copyright 2018, David Somen";

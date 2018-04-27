@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  DaysUntil
+
+  Created by David Somen on 2018/04/13.
+  Copyright © 2018 David Somen. All rights reserved.
+*/
+
+"event_title_seed_1" = "💡＋ボタンを押して追加する";
+"event_title_seed_2" = "💡編集するイベントをタップする";
+"event_title_seed_3" = "💡イベントをスワイプして削除する";
+"event_title_seed_4" = "💡+ボタンをスワイプしてテーマを変更する";
+
+"event_title_screenshot_seed_1" = "息子の誕生日";
+"event_title_screenshot_seed_2" = "理科の宿題";
+"event_title_screenshot_seed_3" = "ディズニーランド";
+"event_title_screenshot_seed_4" = "クリスマス🎄";
+"event_title_screenshot_seed_5" = "わたしの誕生日";
